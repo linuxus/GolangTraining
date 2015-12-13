@@ -2,11 +2,11 @@ package main
 
 import (
 	"encoding/json"
-	"strings"
 	"fmt"
+	"strings"
 )
 
-type Person struct {
+type person struct {
 	First       string
 	Last        string
 	Age         int
@@ -14,7 +14,7 @@ type Person struct {
 }
 
 func main() {
-	var p1 Person
+	var p1 person
 	rdr := strings.NewReader(`{"First":"James", "Last":"Bond", "Age":20}`)
 	json.NewDecoder(rdr).Decode(&p1)
 
